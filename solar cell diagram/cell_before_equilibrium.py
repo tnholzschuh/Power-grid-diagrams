@@ -1,0 +1,63 @@
+import cairo
+
+import math
+
+# 2000 by 850
+def draw_cell_before_equilibrium(context, x_offset, y_offset):
+  # Green box
+  context.set_source_rgb(62.0/255, 134.0/255, 66.0/255)
+  context.rectangle(x_offset + 100, y_offset + 100, 1800, 600)
+  context.fill()
+
+  # Top current collector
+  context.set_source_rgb(0, 0, 0)
+  context.rectangle(x_offset + 750, y_offset + 90, 500, 20)
+  context.fill()
+
+  # Top current collector
+  context.set_source_rgb(0, 0, 0)
+  context.rectangle(x_offset + 90, y_offset + 690, 1820, 20)
+  context.fill()
+
+  # n region
+  for i in range(0, 4):
+    context.set_source_rgb(230.0/255, 212.0/255, 53.0/255)
+    context.arc(x_offset + 250 + 510*i, y_offset + 320, 25, 0 , 2*math.pi)
+    context.fill()
+
+  for i in range(0, 5):
+    context.set_source_rgb(230.0/255, 212.0/255, 53.0/255)
+    context.arc(x_offset + 200 + 400*i, y_offset + 180, 25, 0 , 2*math.pi)
+    context.fill()
+
+  # p region
+  for i in range(0, 6):
+    context.set_source_rgb(1, 1, 1)
+    context.arc(x_offset + 190 + 310*i, y_offset + 490, 25, 0 , 2*math.pi)
+    context.fill()
+
+  for i in range(0, 6):
+    context.set_source_rgb(1, 1, 1)
+    context.arc(x_offset + 350 + 250*i, y_offset + 640, 25, 0 , 2*math.pi)
+    context.fill()
+
+  # Top terminal
+  context.set_source_rgb(0, 0, 0)
+  context.rectangle(x_offset + 980, y_offset + 50, 40, 40)
+  context.fill()
+
+  context.set_source_rgb(0, 0, 0)
+  context.set_font_size(170)
+  context.move_to(x_offset + 1030, y_offset + 75)
+  context.show_text("-")
+
+  # Bottom terminal
+  context.set_source_rgb(0, 0, 0)
+  context.rectangle(x_offset + 980, y_offset + 710, 40, 40)
+  context.fill()
+
+  context.set_source_rgb(0, 0, 0)
+  context.set_font_size(100)
+  context.move_to(x_offset + 1030, y_offset + 800)
+  context.show_text("+")
+
