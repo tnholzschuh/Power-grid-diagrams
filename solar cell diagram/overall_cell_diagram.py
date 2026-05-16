@@ -20,7 +20,7 @@ painting_context.paint()
 box_around_image.draw_box_around_image(cairo.Context(surface), 3400, 3400)
 
 cell_after_equilibrium.draw_cell_after_equilibrium(cairo.Context(surface), 1000, 500)
-cell_before_equilibrium.draw_cell_before_equilibrium(cairo.Context(surface), 1140, 1500)
+cell_before_equilibrium.draw_cell_before_equilibrium(cairo.Context(surface), 1160, 1500)
 
 # cell_legend.draw_cell_legend(cairo.Context(surface), 1800, 2400)
 cell_legend.draw_cell_legend(cairo.Context(surface), 610, 1325)
